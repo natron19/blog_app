@@ -6,7 +6,7 @@ RSpec.describe ArticlesController, type: :controller do
   describe "GET #edit" do
 
     before do
-      @john = User.create(email: "john@examlpe.com", password: "password")
+      @john = User.create(email: "john@example.com", password: "password")
     end
 
     context "owner is allowed to edit his articles" do
@@ -19,7 +19,7 @@ RSpec.describe ArticlesController, type: :controller do
       end
     end
 
-    context "non-owner is not allowed to edit other users articles" do
+    context "non-owner is not allowed to edit other users' articles" do
       it "redirects to the root path" do
         fred = User.create(email: "fred@example.com", password: "password")
 
